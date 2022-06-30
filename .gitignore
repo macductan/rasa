@@ -1,0 +1,8 @@
+application/cache
+LOGS
+application/config/config.php
+assets/upload_excel
+assets/files
+index.php
+application/config/database.php
+application/config/database.php
