@@ -1,4 +1,3 @@
 application/cache
-
-config/config.php
-config/database.php
+application/config/database.php
+application/config/database.php
