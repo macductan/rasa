@@ -1,6 +1,6 @@
 <?php
 
-class Chome extends CI_Controller
+class Ctrangchu extends CI_Controller
 {
 	public function __construct()
 	{

@@ -1,0 +1,10 @@
+.img_giohang{
+    height: 120px;
+    width: 140px;
+    overflow: hidden;
+    margin-left: 20px;
+}
+.tongso{
+    font-size: 20px;
+    color: #ff688f;
+}
