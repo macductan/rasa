@@ -8,14 +8,13 @@
     <!--footer-content-->
 </footer>
 </div>
-
-    <script src="{$base_url}assets/template_giaodien/js/jquery.js"></script>
-    <script src="{$base_url}assets/template_giaodien/js/ajaxify.min.js"></script>
-    <script src="{$base_url}assets/template_giaodien/js/jquery.easing-1.3.pack.js"></script>
-    <script src="{$base_url}assets/template_giaodien/js/jquery.countdown.min.js"></script>
-    <script src="{$base_url}assets/template_giaodien/js/jquery.waitforimages.js"></script>
-    <script src="{$base_url}assets/template_giaodien/js/owl.carousel.min.js"></script>
-    <script src="{$base_url}assets/template_giaodien/js/masonry.pkgd.min.js"></script>
-    <script src="{$base_url}assets/template_giaodien/js/main.js"></script>
+<script src="{$base_url}assets/template_giaodien/js/jquery.js"></script>
+<script src="{$base_url}assets/template_giaodien/js/ajaxify.min.js"></script>
+<script src="{$base_url}assets/template_giaodien/js/jquery.easing-1.3.pack.js"></script>
+<script src="{$base_url}assets/template_giaodien/js/jquery.countdown.min.js"></script>
+<script src="{$base_url}assets/template_giaodien/js/jquery.waitforimages.js"></script>
+<script src="{$base_url}assets/template_giaodien/js/owl.carousel.min.js"></script>
+<script src="{$base_url}assets/template_giaodien/js/masonry.pkgd.min.js"></script>
+<script src="{$base_url}assets/template_giaodien/js/main.js"></script>
 </body>
 </html>

@@ -8,12 +8,16 @@
 	<link rel="stylesheet" href="style.css">
 	<link rel="icon" type="image/png" href="{$base_url}assets/img/logo.png"/>
 	<link rel="stylesheet" href="{$base_url}assets/css/common.css">
-	<link rel="stylesheet" href="{$base_url}assets/css/font-awesome.min.css">
-	<link rel="stylesheet" href="{$base_url}assets/template_giaodien/css/bootstrap.min.css">
-	<link rel="stylesheet" href="{$base_url}assets/template_giaodien/css/owl.carousel.css">
-	<link rel="stylesheet" href="{$base_url}assets/template_giaodien/css/flags.css">
-	<link rel="stylesheet" href="{$base_url}assets/template_giaodien/css/main.css">
 	{if $template=="Vgiohang"}<link rel="stylesheet" href="{$base_url}assets/css/giohang.css">{/if}
+
+	<!-- Template -->
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,600' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="{$base_url}assets/template_giaodien/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{$base_url}assets/template_giaodien/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{$base_url}assets/template_giaodien/css/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="{$base_url}assets/template_giaodien/css/flags.css">
+    <link rel="stylesheet" href="{$base_url}assets/template_giaodien/css/main.css">
+	<!--  -->
 </head>
 
 <body>
