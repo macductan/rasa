@@ -10,6 +10,7 @@
 	<link rel="stylesheet" href="{$base_url}assets/css/common.css">
 	{if $template=="Vgiohang"}<link rel="stylesheet" href="{$base_url}assets/css/giohang.css">{/if}
 	<link rel="stylesheet" href="{$base_url}assets/css/style.css">
+	
 
 	<!-- Template -->
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,600' rel='stylesheet' type='text/css'>
@@ -24,7 +25,11 @@
 </head>
 
 <body>
+<button id="open-boxchat">
+	<i class="fa fa-paper-plane" aria-hidden="true"></i>
+</button>
 <div class="wrapper">
+	<button id="close-boxchat">>></button>
     <section class="chat-area">
       <header>
         <div class="b1">
