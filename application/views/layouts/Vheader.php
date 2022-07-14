@@ -81,7 +81,7 @@
         </div>
       </div>
       <div class="chat-box" id="chat-box">
-        <div class="content-chat">
+        <div class="content-chat" id="content-chat">
 		<div class="chat outgoing">
                 <div class="details">
                     <p>Hello bro</p>

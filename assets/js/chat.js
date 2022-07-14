@@ -1,13 +1,26 @@
 $(document).ready(() => {
+    console.log(localStorage['deleteTime'])
+    console.log(Date.now())
+    second = 86400
+    function createCached(){
+        localStorage['chatHistory'] = $("#content-chat").html()
+        localStorage['createTime'] = Date.now()
+        localStorage['deleteTime'] = parseInt(localStorage['createTime']) + (second * 1000)
+        console.log(localStorage['chatHistory'])
+    }
+
+    if(localStorage['deleteTime'] != undefined && localStorage['deleteTime'] < Date.now()){
+        localStorage['chatHistory'] = ''
+    }
+
+    $("#content-chat").html(localStorage['chatHistory'])
+
     $("#input-field").keyup(function(){
         if ($(this).val() == ""){
             $("#send-button").removeClass("active")
         }else{
             $("#send-button").addClass("active")
         }
-
-
-
     });
 
     $('#input-field').keypress(function (e) {
@@ -73,6 +86,7 @@ $(document).ready(() => {
             $('#input-field').val('')
         }
         scrollToBottom()
+        createCached()
         send(message)
     }
 
@@ -127,11 +141,15 @@ $(document).ready(() => {
                     setTimeout(function() {
                         $('.content-chat').append(value)
                         scrollToBottom()
+                        createCached()
                     }, count*1000)
                     count++
                     
                 });
             }
         }
+        
     }
+
+    
 })
