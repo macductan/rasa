@@ -9,10 +9,13 @@
 	<link rel="icon" type="image/png" href="{$base_url}assets/img/logo.png"/>
 	<link rel="stylesheet" href="{$base_url}assets/css/common.css">
 	{if $template=="Vgiohang"}<link rel="stylesheet" href="{$base_url}assets/css/giohang.css">{/if}
+	<link rel="stylesheet" href="{$base_url}assets/css/style.css">
 
 	<!-- Template -->
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,600' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" href="{$base_url}assets/template_giaodien/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="{$base_url}assets/template_giaodien/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="{$base_url}assets/template_giaodien/css/owl.carousel.css">
     <link rel="stylesheet" type="text/css" href="{$base_url}assets/template_giaodien/css/flags.css">
@@ -21,6 +24,108 @@
 </head>
 
 <body>
+<div class="wrapper">
+    <section class="chat-area">
+      <header>
+        <div class="b1">
+            <img src="assets\imgchatbox\but1.webp" alt="">
+            <div class="details">
+            <span>Product Examples</span>
+            <p>100.000 - 200.000</p>
+            </div>
+        </div>
+        <a class="change-product" data-toggle="collapse" data-target="#collapseExample">
+		<i class="fa fa-search" aria-hidden="true"></i>
+        </a>
+      </header>
+      <div class="collapse" id="collapseExample">
+        <div class="card card-body">
+            <input type="text" placeholder="Tìm kiếm sản phẩm ...">
+            <ul class="results">
+                <li class="b1">
+                    <div class="group-details">
+                        <img class="search-item mr-3" src="assets\imgchatbox\but1.webp" alt="">
+                        <div class="details">
+                            <span class="item-name">Product Examples</span>
+                            <p>100.000 - 200.000</p>
+                        </div>
+                    </div>
+                    <a href=""><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                </li>
+                <li class="b1">
+                    <div class="group-details">
+                        <img class="search-item mr-3" src="assets\imgchatbox\but1.webp" alt="">
+                        <div class="details">
+                            <span class="item-name">Product Examples</span>
+                            <p>100.000 - 200.000</p>
+                        </div>
+                    </div>
+                    <a href=""><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                </li>
+                <li class="b1">
+                    <div class="group-details">
+                        <img class="search-item mr-3" src="assets\imgchatbox\but1.webp" alt="">
+                        <div class="details">
+                            <span class="item-name">Product Examples</span>
+                            <p>100.000 - 200.000</p>
+                        </div>
+                    </div>
+                    <a href=""><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                </li>
+            </ul>
+        </div>
+      </div>
+      <div class="chat-box" id="chat-box">
+        <div class="content-chat">
+		<div class="chat outgoing">
+                <div class="details">
+                    <p>Hello bro</p>
+                </div>
+            </div>
+            <div class="chat incoming">
+                <img class="bot-avatar" src="assets\imgchatbox\ava2.jpg" alt="">
+                <div class="details">
+                    <p>Bot utter hey dude</p>
+                    <div class="custom-button">
+                        <button class="active">Đỏ</button>
+                        <button class="active">Xanh</button>
+                    </div>
+                </div>
+            </div>
+            <div class="suggest_product">
+                <div class="item-suggest mb-1">
+                    <div class="inner-suggest">
+                        <img src="assets\imgchatbox\but1.webp" alt="">
+                        <div class="details-suggest">
+                            <span>Product Name</span>
+                            <p>100.000-200.000</p>
+                        </div>
+                    </div>
+                    <a href=""><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                </div>
+                <div class="item-suggest mb-1">
+                    <div class="inner-suggest">
+                        <img src="assets\imgchatbox\but1.webp" alt="">
+                        <div class="details-suggest">
+                            <span>Product Name</span>
+                            <p>100.000-200.000</p>
+                        </div>
+                    </div>
+                    <a href=""><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <div class="notify-mess">
+                <p>Bạn đã chọn phân loại hàng <b>Đỏ</b></p>
+            </div>
+        </div>
+      </div>
+      <form action="#" class="typing-area">
+        <input type="text" class="incoming_id" name="incoming_id" value="" hidden>
+        <input type="text" name="message" class="input-field" id="input-field" placeholder="Type a message here..." autocomplete="off">
+        <button id="send-button" class="" type="button"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+      </form>
+    </section>
+</div>
 	<div class="quickViewWrap xv-hide">
 		<div class="quickView">
 			<ul class="quickActions clearfix">

@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 date_default_timezone_set("Asia/Ho_Chi_Minh");
 
-$config['base_url'] = 'http://localhost/rasa';
+$config['base_url'] = 'http://localhost:8080/rasa';
 // $config['base_url'] = 'http://totnghiep.atspace.cc';
 
 $config['index_page'] = '';
