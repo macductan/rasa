@@ -1,4 +1,3 @@
-{$dir_anh = 'upload/sanpham/'}
 <div class="xv-slider-wrap">
     <div class="owl-carousel slider_controls1" data-dots=true data-slides="1" data-slides-md="1" data-slides-sm="1" data-margin="0" data-loop="true" data-prev="fa fa-angle-left" data-next="fa fa-angle-right" data-nav="false">
         {foreach $top_3_sp as $sanpham}
@@ -204,7 +203,7 @@ featured
                             <li> </li>
                         </ul>
                         <div class="xv-rating stars-5"></div>
-                        <span class="xv-price">{$sanpham['sGiaSP']}</span>
+                        <span class="xv-price">{$sanpham['sGiaSP']} VNĐ</span>
                         <a data-qv-tab="#qvt-cart" href="#" class="product-buy flytoQuickView">Mua</a>
                     </div>
                 </div>
