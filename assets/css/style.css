@@ -234,6 +234,42 @@ input:focus {
   box-shadow: 0 0 32px rgb(0 0 0 / 8%),
               0rem 16px 16px -16px rgb(0 0 0 / 10%);
 }
+
+.hide{
+  opacity: 0;
+}
+
+#open-boxchat{
+  position: fixed;
+  color: #fff;
+  width: 45;
+  height: 45px;
+  border: none;
+  outline: none;
+  background: #333;
+  font-size: 19px;
+  cursor: pointer;
+  opacity: 1;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  bottom: 10px;
+  right: 10px;
+}
+
+#close-boxchat{
+  position: absolute;
+  right: -10px;
+  width: 25px;
+  top: -10px;
+  border: none;
+  font-weight: bold;
+  background: #5fb7ea;
+  color: white;
+  border-radius: 50%;
+  height: 25px;
+
+}
+
 .chat-box .outgoing{
   display: flex;
   opacity: 0;
@@ -318,6 +354,16 @@ input:focus {
   100%{
     transform: translateY(0);
     opacity: 1;
+  }
+}
+@keyframes animateCloseChatbox {
+  0%{
+    transform: translateX(-20%);
+    opacity: 1;
+  }
+  100%{
+    transform: translateX(0);
+    opacity: 0;
   }
 }
 
