@@ -28,18 +28,30 @@
 	<link rel="stylesheet" type="text/css" href="{$base_url}assets/template_login/css/util.css">
 	<link rel="stylesheet" type="text/css" href="{$base_url}assets/template_login/css/main.css">
 <!--===============================================================================================-->
+	<script src="{$base_url}assets/js/sweetalert2.js"></script>
 </head>
 <body>
-	
+	{if !empty($swal)}
+	<script>
+		Swal.fire({
+			icon: '{$swal["icon"]}',
+			title: '{$swal["title"]}',
+			text: '{$swal["text"]}',
+			footer: '{$swal["footer"]}',
+		})
+	</script>
+	{/if}
 	<div class="limiter">
 		<div class="container-login100">
-			<div class="wrap-login100 p-t-85 p-b-20">
-				<form class="login100-form validate-form">
-					<span class="login100-form-title p-b-70">
-						Đăng nhập
+			<div class="wrap-login100 p-t-20 p-b-20">
+				<form class="login100-form validate-form" method="post" action="">
+					<span class="login100-form-title p-b-40">
+						{$ten_trang[$trang]}
 					</span>
 					<span class="login100-form-avatar">
-						<img src="{$base_url}assets/img/logo.png" alt="AVATAR">
+						<a href="home">
+							<img src="{$base_url}assets/img/logo.png" alt="AVATAR">
+						</a>
 					</span>
 
 					<div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate = "Enter username">
@@ -47,37 +59,39 @@
 						<span class="focus-input100" data-placeholder="Tên đăng nhập"></span>
 					</div>
 
+					{if $trang != 'quenmatkhau'}
 					<div class="wrap-input100 validate-input m-b-50" data-validate="Enter password">
 						<input class="input100" type="password" name="pass">
 						<span class="focus-input100" data-placeholder="Mật khẩu"></span>
 					</div>
+					{if $trang == 'dangky'}
+					<div class="wrap-input100 validate-input m-b-50" data-validate="Enter password">
+						<input class="input100" type="password" name="repass">
+						<span class="focus-input100" data-placeholder="Nhập lại mật khẩu"></span>
+					</div>
+					<div class="wrap-input100 validate-input m-b-50" data-validate="Enter repassword">
+						<input class="input100" type="text" name="nameuser">
+						<span class="focus-input100" data-placeholder="Nhập họ tên"></span>
+					</div>
+					{/if}
+					{/if}
 
 					<div class="container-login100-form-btn">
-						<button class="login100-form-btn">
-							Đăng nhập
+						<button class="login100-form-btn" name="action" value="{$trang}">
+							{$ten_trang[$trang]}
 						</button>
 					</div>
 
-					<ul class="login-more p-t-190">
-						<li class="m-b-8">
-							<span class="txt1">
-								Forgot
-							</span>
-
-							<a href="#" class="txt2">
-								Username / Password?
-							</a>
-						</li>
-
-						<li>
-							<span class="txt1">
-								Don’t have an account?
-							</span>
-
-							<a href="#" class="txt2">
-								Sign up
-							</a>
-						</li>
+					<ul class="login-more p-t-50">
+						{foreach $ten_trang as $uri => $ten}
+							{if $uri != $trang}
+								<li class="m-b-8">
+									<a href="{$uri}" class="txt2 a_login">
+										{$ten}
+									</a>
+								</li>
+							{/if}
+						{/foreach}
 					</ul>
 				</form>
 			</div>

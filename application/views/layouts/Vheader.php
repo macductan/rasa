@@ -10,216 +10,138 @@
 	<link rel="stylesheet" href="{$base_url}assets/css/common.css">
 	{if $template=="Vgiohang"}<link rel="stylesheet" href="{$base_url}assets/css/giohang.css">{/if}
 	<link rel="stylesheet" href="{$base_url}assets/css/style.css">
-	
 
 	<!-- Template -->
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,600' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="{$base_url}assets/template_giaodien/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="{$base_url}assets/template_giaodien/css/owl.carousel.css">
-    <link rel="stylesheet" type="text/css" href="{$base_url}assets/template_giaodien/css/flags.css">
-    <link rel="stylesheet" href="{$base_url}assets/template_giaodien/css/main.css">
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+	<link rel="stylesheet" type="text/css" href="{$base_url}assets/template_giaodien/css/bootstrap.min.css">
+	<script src="{$base_url}assets/template_giaodien/js/jquery3.6.0.min.js"></script>
+	<script src="{$base_url}assets/template_giaodien/js/bootstrap.min.js"></script>
+	<!-- <link rel="stylesheet" type="text/css" href="{$base_url}assets/template_giaodien/js/jquery3.6.0.min.js">
+	<link rel="stylesheet" type="text/css" href="{$base_url}assets/template_giaodien/js/bootstrap.min.js"> -->
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+	<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+	<link rel="stylesheet" type="text/css" href="{$base_url}assets/template_giaodien/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="{$base_url}assets/template_giaodien/css/owl.carousel.css">
+	<link rel="stylesheet" type="text/css" href="{$base_url}assets/template_giaodien/css/flags.css">
+	<link rel="stylesheet" href="{$base_url}assets/template_giaodien/css/main.css">
 	<!--  -->
 </head>
 
 <body>
-<button id="open-boxchat">
-	<i class="fa fa-paper-plane" aria-hidden="true"></i>
-</button>
-<div class="wrapper">
-	<button id="close-boxchat">>></button>
-    <section class="chat-area">
-      <header>
-        <div class="b1">
-            <img src="assets\imgchatbox\but1.webp" alt="">
-            <div class="details">
-            <span>Product Examples</span>
-            <p>100.000 - 200.000</p>
-            </div>
-        </div>
-        <a class="change-product" data-toggle="collapse" data-target="#collapseExample">
-		<i class="fa fa-search" aria-hidden="true"></i>
-        </a>
-      </header>
-      <div class="collapse" id="collapseExample">
-        <div class="card card-body">
-            <input type="text" placeholder="Tìm kiếm sản phẩm ...">
-            <ul class="results">
-                <li class="b1">
-                    <div class="group-details">
-                        <img class="search-item mr-3" src="assets\imgchatbox\but1.webp" alt="">
-                        <div class="details">
-                            <span class="item-name">Product Examples</span>
-                            <p>100.000 - 200.000</p>
-                        </div>
-                    </div>
-                    <a href=""><i class="fa fa-info-circle" aria-hidden="true"></i></a>
-                </li>
-                <li class="b1">
-                    <div class="group-details">
-                        <img class="search-item mr-3" src="assets\imgchatbox\but1.webp" alt="">
-                        <div class="details">
-                            <span class="item-name">Product Examples</span>
-                            <p>100.000 - 200.000</p>
-                        </div>
-                    </div>
-                    <a href=""><i class="fa fa-info-circle" aria-hidden="true"></i></a>
-                </li>
-                <li class="b1">
-                    <div class="group-details">
-                        <img class="search-item mr-3" src="assets\imgchatbox\but1.webp" alt="">
-                        <div class="details">
-                            <span class="item-name">Product Examples</span>
-                            <p>100.000 - 200.000</p>
-                        </div>
-                    </div>
-                    <a href=""><i class="fa fa-info-circle" aria-hidden="true"></i></a>
-                </li>
-            </ul>
-        </div>
-      </div>
-      <div class="chat-box" id="chat-box">
-        <div class="content-chat" id="content-chat">
-		<div class="chat outgoing">
-                <div class="details">
-                    <p>Hello bro</p>
-                </div>
-            </div>
-            <div class="chat incoming">
-                <img class="bot-avatar" src="assets\imgchatbox\ava2.jpg" alt="">
-                <div class="details">
-                    <p>Bot utter hey dude</p>
-                    <div class="custom-button">
-                        <button class="active">Đỏ</button>
-                        <button class="active">Xanh</button>
-                    </div>
-                </div>
-            </div>
-            <div class="suggest_product">
-                <div class="item-suggest mb-1">
-                    <div class="inner-suggest">
-                        <img src="assets\imgchatbox\but1.webp" alt="">
-                        <div class="details-suggest">
-                            <span>Product Name</span>
-                            <p>100.000-200.000</p>
-                        </div>
-                    </div>
-                    <a href=""><i class="fa fa-info-circle" aria-hidden="true"></i></a>
-                </div>
-                <div class="item-suggest mb-1">
-                    <div class="inner-suggest">
-                        <img src="assets\imgchatbox\but1.webp" alt="">
-                        <div class="details-suggest">
-                            <span>Product Name</span>
-                            <p>100.000-200.000</p>
-                        </div>
-                    </div>
-                    <a href=""><i class="fa fa-info-circle" aria-hidden="true"></i></a>
-                </div>
-            </div>
-            <div class="notify-mess">
-                <p>Bạn đã chọn phân loại hàng <b>Đỏ</b></p>
-            </div>
-        </div>
-      </div>
-      <form action="#" class="typing-area">
-        <input type="text" class="incoming_id" name="incoming_id" value="" hidden>
-        <input type="text" name="message" class="input-field" id="input-field" placeholder="Type a message here..." autocomplete="off">
-        <button id="send-button" class="" type="button"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
-      </form>
-    </section>
-</div>
-	<div class="quickViewWrap xv-hide">
-		<div class="quickView">
-			<ul class="quickActions clearfix">
-				<li title="Profile">
-					<!--<span class="userAlerts-count qvCount">01</span>-->
-					<a data-wide="true" href="#qvt-user">
-						<img src="{$base_url}assets/img/basic/avatar83.png" alt="">
-						<span>Login</span>
-					</a>
-				</li>
-				<li title="shopping cart">
-					<span class="cartItems-count qvCount">1</span>
-					<a data-wide="false" href="#qvt-cart">
-						<img src="{$base_url}assets/img/basic/bag45.png" alt="">
-						<span>Your Cart</span>
-					</a>
-				</li>
-				<li>
-					<!--<span class="compare-count qvCount">03</span>-->
-					<a data-wide="false" href="#qvt-wishlist" title="Wish List">
-						<img src="{$base_url}assets/img/basic/heart365.png" alt="">
-						<span>Your Wishlist</span>
-					</a>
-				</li>
-				<li>
-					<!--<span class="compare-count qvCount">03</span>-->
-					<a data-wide="false" href="#qvt-compare" title="Compare List">
-						<img src="{$base_url}assets/img/basic/line.png" alt="">
-						<span>Compare List</span>
-					</a>
-				</li>
-			</ul>
-
-			<div class="quickviewTabs">
-				<div id="qvt-user" class="qv-panel">
-					<a href="#" class="closeQPanel"><i class="fa fa-close"></i></a>
-					<form method="post" action="login" id="login">
-						<p class="text-center"> <img src="{$base_url}assets/img/basic/padlock106.png" alt=""></p>
-						<input type="text" name="username" placeholder="Username" id="username">
-						<input type="password" name="password" placeholder="Password" id="password">
-						<a href="#" class="lost">Lost your password?</a><br><br>
-						<input type="submit" name="submit" value="Login" class="btn-blue btn">
-					</form>
+	<button id="open-boxchat">
+		<i class="fa fa-paper-plane" aria-hidden="true"></i>
+	</button>
+	<div class="wrapper">
+		<button id="close-boxchat">>></button>
+		<section class="chat-area">
+			<header>
+				<div class="b1">
+					<img src="assets\imgchatbox\but1.webp" alt="">
+					<div class="details">
+						<span>Product Examples</span>
+						<p>100.000 - 200.000</p>
+					</div>
 				</div>
-
-				<div id="qvt-cart" class="qv-panel">
-					<a href="#" class="closeQPanel"><i class="fa fa-close"></i></a>
-					<ul class="quickShoping-list">
-						<li>
-							<a data-pid="xyz101" data-qty="2" class="qv-remove-prod fa fa-remove" href="#"></a>
-							<a href="#"><img src="{$base_url}assets/img/news-img-2.png" alt=""></a>
-							<span>x2</span>
+				<a class="change-product" data-toggle="collapse" data-target="#collapseExample">
+					<i class="fa fa-search" aria-hidden="true"></i>
+				</a>
+			</header>
+			<div class="collapse" id="collapseExample">
+				<div class="card card-body">
+					<input type="text" placeholder="Tìm kiếm sản phẩm ...">
+					<ul class="results">
+						<li class="b1">
+							<div class="group-details">
+								<img class="search-item mr-3" src="assets\imgchatbox\but1.webp" alt="">
+								<div class="details">
+									<span class="item-name">Product Examples</span>
+									<p>100.000 - 200.000</p>
+								</div>
+							</div>
+							<a href=""><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+						</li>
+						<li class="b1">
+							<div class="group-details">
+								<img class="search-item mr-3" src="assets\imgchatbox\but1.webp" alt="">
+								<div class="details">
+									<span class="item-name">Product Examples</span>
+									<p>100.000 - 200.000</p>
+								</div>
+							</div>
+							<a href=""><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+						</li>
+						<li class="b1">
+							<div class="group-details">
+								<img class="search-item mr-3" src="assets\imgchatbox\but1.webp" alt="">
+								<div class="details">
+									<span class="item-name">Product Examples</span>
+									<p>100.000 - 200.000</p>
+								</div>
+							</div>
+							<a href=""><i class="fa fa-info-circle" aria-hidden="true"></i></a>
 						</li>
 					</ul>
-
-					<a href="#" class="btn btn-blue triggerCart" title="check out">
-						<i class="fa fa-cart-arrow-down"></i>
-						<span>Visit Checkout Page</span>
-					</a>
-				</div>
-
-				<div id="qvt-wishlist" class="qv-panel">
-					<a href="#" class="closeQPanel"><i class="fa fa-close"></i></a>
-					<ul class="quickShoping-list empty"></ul>
-					<a href="#" class="btn btn-blue triggerCart" title="View Wishlist Page">
-						<i class="fa fa-heart"></i>
-						<span>Visit Checkout Page</span>
-					</a>
-				</div>
-
-				<div id="qvt-compare" class="qv-panel">
-					<a href="#" class="closeQPanel"><i class="fa fa-close"></i></a>
-					<ul class="quickShoping-list empty"></ul>
-					<a href="#" class="btn btn-blue triggerCompare" title="Compare Items">
-						<i class="fa fa-exchange"></i>
-						<span>Visit Checkout Page</span>
-					</a>
 				</div>
 			</div>
-		</div>
+			<div class="chat-box" id="chat-box">
+				<div class="content-chat" id="content-chat">
+					<div class="chat outgoing">
+						<div class="details">
+							<p>Hello bro</p>
+						</div>
+					</div>
+					<div class="chat incoming">
+						<img class="bot-avatar" src="assets\imgchatbox\ava2.jpg" alt="">
+						<div class="details">
+							<p>Bot utter hey dude</p>
+							<div class="custom-button">
+								<button class="active">Đỏ</button>
+								<button class="active">Xanh</button>
+							</div>
+						</div>
+					</div>
+					<div class="suggest_product">
+						<div class="item-suggest mb-1">
+							<div class="inner-suggest">
+								<img src="assets\imgchatbox\but1.webp" alt="">
+								<div class="details-suggest">
+									<span>Product Name</span>
+									<p>100.000-200.000</p>
+								</div>
+							</div>
+							<a href=""><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+						</div>
+						<div class="item-suggest mb-1">
+							<div class="inner-suggest">
+								<img src="assets\imgchatbox\but1.webp" alt="">
+								<div class="details-suggest">
+									<span>Product Name</span>
+									<p>100.000-200.000</p>
+								</div>
+							</div>
+							<a href=""><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+						</div>
+					</div>
+					<div class="notify-mess">
+						<p>Bạn đã chọn phân loại hàng <b>Đỏ</b></p>
+					</div>
+				</div>
+			</div>
+			<form action="#" class="typing-area">
+				<input type="text" class="incoming_id" name="incoming_id" value="" hidden>
+				<input type="text" name="message" class="input-field" id="input-field" placeholder="Type a message here..." autocomplete="off">
+				<button id="send-button" class="" type="button"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+			</form>
+		</section>
 	</div>
-	<div class="qv-alert"><img src="{$base_url}assets/img/basic/shopping102.png" alt=""> Product Added Successfully</div>
 
 	<!-- Header -->
 	<header class="doc-header header-light shadow-bottom">
 		<!--top header-->
 		<div class="header-bottom">
 			<div class="container">
-				<a class="logo" href="index1.html">
+				<a class="logo" href="home">
 					<img id="img_logo" src="{$base_url}assets/img/logo.png" alt="" />
 				</a>
 				<nav>
@@ -238,89 +160,21 @@
 								<li><a href="checkout1.html">Shop Checkout</a></li>
 							</ul>
 						</li> -->
-						<li><a href="#">Danh mục</a></li>
-						<li><a href="#">Sản phẩm yêu thích</a></li>
-						<li><a href="#">Đăng nhập</a></li>
-						<li><a href="#">Đăng ký</a></li>
+						<li><a href="home">Trang chủ</a></li>
+						<li><a href="danhmuc">Danh mục</a></li>
+						{if !isset($user)}
+						<li><a href="dangnhap">Đăng nhập</a></li>
+						<li><a href="dangky">Đăng ký</a></li>
+						{else}
+						<li><a href="{$trang_hientai}?action=dangxuat">Đăng xuất</a></li>
+						{if $user['quyen'] == 'nhanvien'}
+						<li><a href="dangky">Quản lý sản phẩm</a></li>
+						{/if}
+						{/if}
 					</ul>
-					<a href="#" class="openCart"></a>
-					<div class="table-responsive cart-calculations  text-center">
-						<table class="table">
-							<tbody class="shadow-around">
-								<tr class="table-body">
-									<td>
-										<figure><img src="{$base_url}assets/img/cart-img-1.png" alt="" /></figure>
-									</td>
-									<td>
-										<div class="cart-wrappper text-left">
-											<h6>Sony Powershot G2530</h6>
-											<p><span>Availability</span>: Available in Stock</p>
-											<p><span>Product Code</span>: CwT4a</p>
-										</div>
-									</td>
-									<td>
-										<div class="quantity-control">
-											<span class="btn-cart btn-square btn-plus btn-qty"><i class="fa fa-plus"></i></span>
-											<input type="text" value="2" data-min="1" data-minalert="Minimum limit reached" data-max="10" data-maxalert="Maximum limit reached" data-invalid="Enter valid quantity">
-											<span class="btn-cart btn-square btn-minus btn-qty"><i class="fa fa-minus"></i></span>
-										</div>
-									</td>
-									<td>
-										<span class="cart-content">Unit Price:</span>
-										<span class="cart-price">$250</span>
-									</td>
-									<td>
-										<span class="cart-content">Sub Price:</span>
-										<span class="cart-price">$500</span>
-									</td>
-									<td>
-										<a class="cart-action" href="#"><i class="fa fa-trash-o"></i></a>
-									</td>
-								</tr>
-								<tr class="table-body">
-									<td>
-										<figure><img src="{$base_url}assets/img/cart-img-2.png" alt="" /></figure>
-									</td>
-									<td>
-										<div class="cart-wrappper text-left">
-											<h6>Macbook 2015</h6>
-											<p><span>Availability</span>: Available in Stock</p>
-											<p><span>Product Code</span>: CwT4a</p>
-										</div>
-									</td>
-									<td>
-										<div class="quantity-control">
-											<span class="btn-cart btn-square btn-plus btn-qty"><i class="fa fa-plus"></i></span>
-											<input type="text" value="2" data-min="1" data-minalert="Minimum limit reached" data-max="5" data-maxalert="Maximum limit reached" data-invalid="Enter valid quantity">
-											<span class="btn-cart btn-square btn-minus btn-qty"><i class="fa fa-minus"></i></span>
-										</div>
-									</td>
-									<td>
-										<span class="cart-content">Unit Price:</span>
-										<span class="cart-price">$1500</span>
-									</td>
-									<td>
-										<span class="cart-content">Sub Price:</span>
-										<span class="cart-price">$1500</span>
-									</td>
-									<td>
-										<a class="cart-action" href="#"><i class="fa fa-trash-o"></i></a>
-									</td>
-								</tr>
-								<tr class="table-body style">
-									<td></td>
-									<td>
-										<a href="cart1.html" class="btn-cart btn-rectangle">View Cart</a>
-										<a href="checkout1.html" class="btn-cart btn-rectangle">Checkout</a>
-									</td>
-									<td></td>
-									<td></td>
-									<td class="style">TOTAL:<span class="colpink">$2031</span></td>
-									<td></td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
+					{if isset($user) && $user['quyen'] == 'khachhang'}
+					<a href="giohang" class="openCart"></a>
+					{/if}
 				</nav>
 			</div>
 		</div>
@@ -341,16 +195,16 @@ Search
 					<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
 				</ul>
 			</div>
-			<form class="search-form">
-				<div class="custome-select">
+			<form class="search-form" method="post" action="">
+				<!-- <div class="custome-select">
 					<b class="fa fa-caret-down"></b>
 					<span>Select a Category</span>
 					<select class="search-cate notranslate" id="search-dropdown-box">
 						<option value="">All Categories</option>
 					</select>
-				</div>
-				<input type="text" placeholder="I am searching for...">
-				<button type="submit"><i class="fa fa-search"></i></button>
+				</div> -->
+				<input type="text" name="timkiem" placeholder="Tìm kiếm" value='{if isset($timkiem)}{$timkiem}{/if}'>
+				<button type="submit" name="action" value="timkiem"><i class="fa fa-search"></i></button>
 			</form>
 		</div>
 	</div>

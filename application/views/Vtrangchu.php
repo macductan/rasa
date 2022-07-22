@@ -12,7 +12,7 @@
                             <h1>{$sanpham['sTen_SP']}</h1>
                             <p>{$sanpham['sMota']}</p>
                             <a href="#" class="btn btn-grey btn-price">Từ {number_format($sanpham['sGiaSP'], 0, '', '.')} VNĐ</a>
-                            <a href="#" class="btn btn-grey">Mua ngay</a>
+                            <!-- <button class="btn btn-grey mua" data-masp="{$sanpham['sPK_Ma_SP']}">Thêm vào giỏ hàng</button> -->
                         </div>
                     </div>
                 </div>
@@ -78,73 +78,65 @@ new items
 =================================-->
 
 <div class="container">
-    <div class="product-overview pt-25 pb-45">
-        <div class="row">
-            <div class="col-xs-12 col-sm-3 hidden-xs">
-                <nav class="secondary-nav">
-                    <form class="search-form">
-                        <input type="text" placeholder="Tìm kiếm">
-                        <button type="submit"><i class="fa fa-search"></i></button>
-                    </form>
-                    <!--search form-->
-                    <ul>
-                        <li><a href="#"><span class="p-count">225</span>Bút</a></li>
-                        <li><a href="#"><span class="p-count">100</span>Bàn</a></li>
-                        <li><a href="#"><span class="p-count">105</span>Máy tính</a></li>
-                        <li><a href="#"><span class="p-count">357</span>Headphones</a></li>
-                        <li><a href="#"><span class="p-count">400</span>Gaming Gear</a></li>
-                        <li><a href="#"><span class="p-count">500</span>Accessories</a></li>
-                        <li><a href="#"><span class="p-count">248</span>Other</a></li>
-                    </ul>
-                </nav>
-                <!--secondary nav-->
-            </div>
+    <div class="xv-featured pt-25 pb-30">
 
-            <div class="col-xs-12 col-sm-9">
-                <section class="new-product">
-                    <header class="sec-heading text-center">
-                        <h2><span>Mới</span></h2>
-                        <span>Cập nhật vào {date("d/m/Y")}</span>
-                    </header>
-                    <!--header-->
-                    <div class="xv-product-slides mt-25 mb-25">
-                        <div class="owl-carousel slider_controls1 products" data-thumbnail="figure .xv-superimage" data-product=".xv-product" data-dots="false" data-prev="fa fa-angle-left" data-next="fa fa-angle-right" data-slides="3" data-slides-md="2" data-slides-sm="1" data-margin="24" data-loop="true" data-nav="true">
-                            {foreach $sp_moi as $sanpham}
-                            <div data-pid="xyz100" data-name="Smartphone Apple iPhone 5 64GB" data-category="mobiles" data-price="250" class="xv-product style shadow-around">
-                                <figure>
-                                    <a href="#"><img class="xv-superimage" src="{$base_url}{$dir_anh}{$sanpham['sPK_Ma_SP']}/{$sanpham['sPimage']}" alt="" /></a>
-                                    <figcaption>
-                                        <ul>
-                                            <li><a data-qv-tab="#qvt-wishlist" class="btn-cart flytoQuickView btn-square btn-blue" href="#"><i class="fa fa-heart"></i></a></li>
-                                            <li><a data-qv-tab="#qvt-compare" class="btn-cart flytoQuickView btn-square btn-blue" href="#"><i class="fa fa-exchange"></i></a></li>
-                                            <li><a class="btn-cart btn-square btn-blue" href="#"><i class="fa fa-expand"></i></a></li>
-                                        </ul>
-                                    </figcaption>
-                                </figure>
-                                <div class="xv-product-content">
-                                    <h3><a href="detail1.html">{$sanpham['sTen_SP']}</a></h3>
-                                    <!-- <ul class="color-opt">
-                                        <li><a href="#">White</a></li>
-                                        <li><a href="#">Black</a></li>
-                                        <li><a href="#">Gold</a></li>
-                                    </ul> -->
-                                    <ul class="color-opt">
-                                        <li> </li>
-                                    </ul>
+        <header class="sec-heading text-center">
+            <!-- <div class="category-wrap style">
+        <span class="categorise"><i class="fa fa-bars"></i>All Categories<i class="fa style fa-caret-down"></i></span>
+        <ul class="cat-dropDown">
+            <li><a href="#">Smart Phones</a></li>
+            <li><a href="#">Tablets</a></li>
+            <li><a href="#">Cameras</a></li>
+            <li><a href="#">Headphones</a></li>
+            <li><a href="#">Gaming Gear</a></li>
+        </ul>
+    </div> -->
+            <h2><span>Mới</span></h2>
+            <span>Cập nhật vào {date("d/m/Y")}</span>
+        </header>
+        <!--header-->
 
-                                    <div class="xv-rating stars-5"></div>
-                                    <span class="xv-price">{number_format($sanpham['sGiaSP'], 0, '', '.')} VNĐ</span>
-                                    <a data-qv-tab="#qvt-cart" href="#" class="product-buy flytoQuickView">Mua</a>
-                                </div>
+        <div class="xv-product-slides mt-25 mb-25">
+            <div class="owl-carousel slider_controls1 products" data-thumbnail="figure .xv-superimage" data-product=".xv-product" data-dots="false" data-prev="fa fa-angle-left" data-next="fa fa-angle-right" data-slides="4" data-slides-md="2" data-slides-sm="1" data-margin="24" data-loop="true" data-nav="true">
+
+                {foreach $sp_moi as $sanpham}
+                <div class="xv-product-unit">
+                    <div class="xv-product shadow-around">
+                        <figure>
+                            <a href="#"><img class="xv-superimage" src="{$base_url}{$dir_anh}{$sanpham['sPK_Ma_SP']}/{$sanpham['sPimage']}" alt="" /></a>
+                        </figure>
+                        <div class="xv-product-content">
+                            <h3><a href="detail1.html">{$sanpham['sTen_SP']}</a></h3>
+                            <div class="">
+                                {if $sanpham['iSoLuong'] > 0}
+                                <!-- <select name="phanloai_sp" id="phaloai_moi_{$sanpham['sPK_Ma_SP']}">
+                                    {foreach $sanpham['sTenPL'] as $tenpl}
+                                    <option value="{$tenpl}">{$tenpl}</option>
+                                    {/foreach}
+                                </select> -->
+                                {/if}
+                                &nbsp;
                             </div>
-                            {/foreach}
+                            <div class="row">
+                                <span class="xv-price col-sm-6 text-center">{number_format($sanpham['sGiaSP'], 0, '', '.')} VNĐ</span>
+                                {if $sanpham['iSoLuong'] == 0}
+                                <!-- <div class="text-right col-sm-6 text-danger text-uppercase font-weight-bold">Hết hàng</div> -->
+                                <div class="text-right col-sm-6"><button class="btn btn-danger disabled">Hết</button></div>
+                                {elseif isset($user) && $user['quyen'] == 'khachhang'}
+                                <!-- <div class="text-right col-sm-6"><button class="btn btn-primary mua " type="button" data-maphanloai="phaloai_moi" data-masp="{$sanpham['sPK_Ma_SP']}">Mua</button></div> -->
+                                {/if}
+                            </div>
+
                         </div>
+                        <!--xv-product-content-->
                     </div>
-                </section>
+                    <!--xv-product(list-view)-->
+                </div>
+                {/foreach}
+                <!--xv-product-->
             </div>
-            <!--co-->
+            <!--owl carousel-->
         </div>
-        <!--row-->
     </div>
     <!--product-overview -->
 </div>
@@ -179,33 +171,38 @@ featured
         <div class="xv-product-slides mt-25 mb-25">
             <div class="owl-carousel slider_controls1 products" data-thumbnail="figure .xv-superimage" data-product=".xv-product" data-dots="false" data-prev="fa fa-angle-left" data-next="fa fa-angle-right" data-slides="4" data-slides-md="2" data-slides-sm="1" data-margin="24" data-loop="true" data-nav="true">
 
-                {foreach $sp_moi as $sanpham}
-                <div data-pid="xyz200" data-name="Smartphone Apple iPhone 5 64GB" data-category="mobiles" data-price="250" class="xv-product style shadow-around">
-                    <figure>
-                        <a href="#"><img class="xv-superimage" src="{$base_url}{$dir_anh}{$sanpham['sPK_Ma_SP']}/{$sanpham['sPimage']}" alt="" /></a>
-                        <figcaption>
-                            <ul>
-                                <li><a data-qv-tab="#qvt-wishlist" class="btn-cart flytoQuickView btn-square btn-blue" href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a data-qv-tab="#qvt-compare" class="btn-cart flytoQuickView btn-square btn-blue" href="#"><i class="fa fa-exchange"></i></a></li>
-                                <li><a class="btn-cart btn-square btn-blue" href="#"><i class="fa fa-expand"></i></a></li>
-                            </ul>
-                        </figcaption>
-                    </figure>
-                    <!--figure-->
-                    <div class="xv-product-content">
-                        <h3><a href="detail1.html">{$sanpham['sTen_SP']}</a></h3>
-                        <!-- <ul class="color-opt">
-                            <li><a href="#">White</a></li>
-                            <li><a href="#">Black</a></li>
-                            <li><a href="#">Gold</a></li>
-                        </ul> -->
-                        <ul class="color-opt">
-                            <li> </li>
-                        </ul>
-                        <div class="xv-rating stars-5"></div>
-                        <span class="xv-price">{$sanpham['sGiaSP']} VNĐ</span>
-                        <a data-qv-tab="#qvt-cart" href="#" class="product-buy flytoQuickView">Mua</a>
+            {foreach $sp_moi as $sanpham}
+                <div class="xv-product-unit">
+                    <div class="xv-product shadow-around">
+                        <figure>
+                            <a href="#"><img class="xv-superimage" src="{$base_url}{$dir_anh}{$sanpham['sPK_Ma_SP']}/{$sanpham['sPimage']}" alt="" /></a>
+                        </figure>
+                        <div class="xv-product-content">
+                            <h3><a href="detail1.html">{$sanpham['sTen_SP']}</a></h3>
+                            <div class="">
+                                {if $sanpham['iSoLuong'] > 0}
+                                <!-- <select name="phanloai_sp" data-masp="{$sanpham['sPK_Ma_SP']}" data-btn="noibat">
+                                    {foreach $sanpham['sTenPL'] as $tenpl}
+                                    <option value="{$tenpl}">{$tenpl}</option>
+                                    {/foreach}
+                                </select> -->
+                                {/if}
+                                &nbsp;
+                            </div>
+                            <div class="row">
+                                <span class="xv-price col-sm-6 text-center">{number_format($sanpham['sGiaSP'], 0, '', '.')} VNĐ</span>
+                                {if $sanpham['iSoLuong'] == 0}
+                                <!-- <div class="text-right col-sm-6 text-danger text-uppercase font-weight-bold">Hết hàng</div> -->
+                                <div class="text-right col-sm-6"><button class="btn btn-danger disabled">Hết</button></div>
+                                {elseif isset($user) && $user['quyen'] == 'khachhang'}
+                                <!-- <div class="text-right col-sm-6"><button class="btn btn-primary mua btn_noibat_{$sanpham['sPK_Ma_SP']}" type="button" data-maphanloai="{$sanpham['sTenPL'][0]}" data-masp="{$sanpham['sPK_Ma_SP']}">Mua</button></div> -->
+                                {/if}
+                            </div>
+
+                        </div>
+                        <!--xv-product-content-->
                     </div>
+                    <!--xv-product(list-view)-->
                 </div>
                 {/foreach}
                 <!--xv-product-->
@@ -216,14 +213,6 @@ featured
     <!--xv-featured-->
 </div>
 <!--container-->
-
-<!--========================================
-watches
-===========================================-->
-
-<!--=================================
-Testimonial
-=================================-->
 
 <div class="xv-testimonial pb-15">
     <div class="container">

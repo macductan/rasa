@@ -192,16 +192,16 @@ jQuery(function($) {
         }
     });
 
-    $('body').on("click", ".openCart", function(e) {
-        e.preventDefault();
-        e.stopImmediatePropagation();
-        $(this).toggleClass("active").parent().find('.table-responsive').fadeToggle();
-    });
+    // $('body').on("click", ".openCart", function(e) {
+    //     e.preventDefault();
+    //     e.stopImmediatePropagation();
+    //     $(this).toggleClass("active").parent().find('.table-responsive').fadeToggle();
+    // });
 
     $('body').on("click", function(e) {
         if (!$(e.target).closest('.doc-header').length) {
             $(".cart-calculations").slideUp();
-            $(".openCart").removeClass("active");
+            // $(".openCart").removeClass("active");
         }
     });
 

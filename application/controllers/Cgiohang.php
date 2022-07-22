@@ -1,15 +1,16 @@
 <?php
 
-class Cgiohang extends CI_Controller
+class Cgiohang extends MY_Controller
 {
 	public function __construct()
 	{
 		parent::__construct();
+		$this->load->model('Mgiohang');
 	}
 
 	public function index()
 	{
-		$data = array();
+		$data['donhang'] = $this->Mgiohang->get_donhang();
         $temp['data'] = $data;
 		$temp['template'] = 'Vgiohang';
 		$this->load->view('layouts/Vlayout', $temp);

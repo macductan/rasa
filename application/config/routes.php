@@ -11,4 +11,7 @@ $route['giohang'] = 'Cgiohang';
 
 $route['dangnhap'] = 'Cdangnhap';
 $route['dangky'] = 'Cdangnhap';
-$route['quanly'] = 'quanly/Cquanly';
+$route['quenmatkhau'] = 'Cdangnhap';
+
+$route['taikhoannhanvien'] = 'quanly/Ctknhanvien';
+$route['taikhoankhachhang'] = 'quanly/Cquanly';
